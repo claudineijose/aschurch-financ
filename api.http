@@ -1,0 +1,63 @@
+GET http://localhost:3000/bancos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2xhdWRpbmVpam9zZSIsImlhdCI6MTcwNzQ5NzQ3OCwiZXhwIjoxNzA3NTgzODc4fQ.5EiPXHe31AGXcSs5SdS1ntJ8C6n_B_pmU4xBdbdBJXQ
+
+###
+GET http://localhost:3000/bancos/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2xhdWRpbmVpam9zZSIsImlhdCI6MTcwNzQ5NzQ3OCwiZXhwIjoxNzA3NTgzODc4fQ.5EiPXHe31AGXcSs5SdS1ntJ8C6n_B_pmU4xBdbdBJXQ
+
+###
+POST http://localhost:3000/bancos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2xhdWRpbmVpam9zZSIsImlhdCI6MTcwNzQ5NzQ3OCwiZXhwIjoxNzA3NTgzODc4fQ.5EiPXHe31AGXcSs5SdS1ntJ8C6n_B_pmU4xBdbdBJXQ
+Content-Type: application/json
+
+{
+    "Descricao": "BANCO TESTES 3",
+    "Site": "http://www.testes.com.br",
+    "Observacao": "Observação de Testes"
+}
+
+###
+PATCH http://localhost:3000/bancos/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2xhdWRpbmVpam9zZSIsImlhdCI6MTcwNzQ5NzQ3OCwiZXhwIjoxNzA3NTgzODc4fQ.5EiPXHe31AGXcSs5SdS1ntJ8C6n_B_pmU4xBdbdBJXQ
+Content-Type: application/json
+
+{
+    "Situacao": "I"
+}
+
+###
+DELETE  http://localhost:3000/bancos/2
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "claudineijose", 
+    "password": "Ls2pVIK/ZgAcZkipqe1vRg=="
+}
+
+###
+POST http://localhost:3000/contas-bancarias
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2xhdWRpbmVpam9zZSIsImlhdCI6MTcwNzQ5NzQ3OCwiZXhwIjoxNzA3NTgzODc4fQ.5EiPXHe31AGXcSs5SdS1ntJ8C6n_B_pmU4xBdbdBJXQ
+Content-Type: application/json
+
+{
+    "BancoId": 2,
+    "TipoConta": "C",
+    "DataAbertura": "2024-02-09T00:00:00.000Z",
+    "Agencia": "12114",
+    "ContaNumero": "123456",
+    "Gerente": "Claudinei Ferreira",
+    "Telefone": "(11)99999-9999",
+    "Email": "claudineijose@gmail.com",
+    "Observacao": "Observacao",
+    "Limite": 10000,
+    "DataVencimentoLimite": "2024-02-22T00:00:00.000Z",
+    "Situacao": "A"
+}
+
+
+###
+GET http://localhost:3000/contas-bancarias
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2xhdWRpbmVpam9zZSIsImlhdCI6MTcwNzQ5NzQ3OCwiZXhwIjoxNzA3NTgzODc4fQ.5EiPXHe31AGXcSs5SdS1ntJ8C6n_B_pmU4xBdbdBJXQ
